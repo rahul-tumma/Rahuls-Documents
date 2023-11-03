@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Akshar Tours &amp; Travels Website </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="add32064-c017-4167-8cb4-17691f069a4e" class="page sans"><header><h1 class="page-title">Akshar <strong>Tours &amp; Travels Website </strong></h1><p class="page-description"></p></header><div class="page-body"><p id="b10b1a23-0052-4d7a-9727-9ddb09686515" class="">Here&#x27;s a table that outlines some of the design themes we discussed earlier and their potential advantages for such a website:</p><p id="daa330cb-7af6-49df-ab9a-620a7f65a444" class=""><strong>Design Themes for a Tours &amp; Travels Website</strong></p><h2 id="fd238b86-6ac8-41de-8d7a-00b190217c3f" class=""><strong>1. Material Design</strong></h2><figure id="135aa9b0-230a-45d3-bcfc-a97ec18b29ac"><a href="https://www.makemytrip.com/bus-tickets/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://www.makemytrip.com/bus-tickets/</div></div></a></figure><figure id="e8410911-3d27-4300-897e-d81b637e3a78"><div class="source"><a href="https://kstatic.googleusercontent.com/files/2e8ce35f669a5b728e18297dbf7d1815cce5486fe51447b46a4e08864e93e0bc057eec6eab8cb9d5aed93e0983b705bcb165a0b70a40197f400c550281456934">https://kstatic.googleusercontent.com/files/2e8ce35f669a5b728e18297dbf7d1815cce5486fe51447b46a4e08864e93e0bc057eec6eab8cb9d5aed93e0983b705bcb165a0b70a40197f400c550281456934</a></div></figure><ul id="22ab34c1-28b1-4ad3-985a-1b8c09b3b949" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Clean, responsive, and user-friendly design.</li></ul><ul id="5b2bc2ae-517e-4f6d-8275-61a153a60509" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Ideal for showcasing travel destinations and providing an intuitive experience.</li></ul><ul id="fcedbe6c-8cb1-4e38-89e3-1e84ae7893f9" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: General travelers, all age groups.</li></ul><p id="47dfc426-9bb3-4958-83ee-38cb0b3057b9" class="">
+</p><h2 id="f4fb5ef8-a0e6-43a7-81f0-2fc68a88a4ae" class=""><strong>2. Flat Design</strong></h2><figure id="804fa4cd-2fbc-4235-a9ad-66c4f97d8776" class="image"><a href="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/24284148.jpg"><img style="width:1000px" src="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/24284148.jpg"/></a></figure><figure id="93f95909-a07e-4c2b-87ae-1850c17ba5ec" class="image"><a href="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled.png"><img style="width:800px" src="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled.png"/></a></figure><ul id="05838791-fbc5-4e3e-949b-029ff03fa93e" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Simple and minimalistic design.</li></ul><ul id="000c7ecc-07e2-4de0-a442-9f633c1d09ec" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Makes information about tours and bookings easily accessible and clear.</li></ul><ul id="752bb2d9-6358-4b86-8520-9b5acc869969" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: General travelers, modern appeal.</li></ul><p id="9033c72e-168c-41f6-9510-ad46a49d1b85" class="">
+</p><h2 id="5c7dc5bf-bd23-434b-97a6-9ffbb34cbf0b" class=""><strong>3. Skeuomorphism</strong></h2><figure id="5ff1dce0-e97c-48ca-94ab-2a0d5c52d1d5"><a href="https://terrabites.eu/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Sesame superfood snack | Terrabites</div><div class="bookmark-description">Terrabites sesame squares are made of premium, natural ingredients in a range of delicious new flavours.</div></div><div class="bookmark-href"><img src="https://terrabites.eu/themes/pb/images/apple-touch-icon.png" class="icon bookmark-icon"/>https://terrabites.eu/</div></div></a></figure><ul id="92e8f0cd-a26a-427d-9c98-cd7cbfc05832" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Realistic and tangible design elements.</li></ul><ul id="e14ca9c2-60f1-4f60-b3f9-f9dd992ec404" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Creates a sense of familiarity and trust in the booking process.</li></ul><ul id="6d1af32b-f6bd-41c0-b87f-66e4f3c1141b" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Trust-seeking travelers, mature audience.</li></ul><ul id="b98ad069-f98a-4dbc-867c-849bf5fce892" class="bulleted-list"><li style="list-style-type:disc">Reference:<a href="https://onextrapixel.com/skeuomorphism-food-examples-of-websites/">https://onextrapixel.com/skeuomorphism-food-examples-of-websites/</a></li></ul><p id="5ddd23a5-79ca-43f4-b755-400364242d65" class="">
+</p><h2 id="aa2b4627-d8c1-439e-94aa-475385855d55" class=""><strong>4. Neumorphism (Soft UI)</strong></h2><figure id="4d12c82a-7768-40d6-9636-c1b3011491ff"><div class="source"><a href="https://demo.themesberg.com/neumorphism-ui/index.html">https://demo.themesberg.com/neumorphism-ui/index.html</a></div></figure><ul id="7d3841e9-c314-4364-8319-1bb7ec1f309f" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Soft and tactile design with depth.</li></ul><ul id="024feee7-5eab-47ac-b85b-9cdc5cff786a" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Gives interactivity and depth, enhancing user engagement.</li></ul><ul id="c1166d0c-5216-4740-9eb6-be5bc425666a" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Modern travelers, tech-savvy users.</li></ul><p id="f671e77c-d3fa-48ce-bfaa-f9327d7af9b0" class="">
+</p><h2 id="35382727-e8dc-4c20-a971-2de5f3f1fda8" class=""><strong>5. Glassmorphism</strong></h2><figure id="ff8fb886-d78b-4ab3-a63d-0369115caed0" class="image"><a href="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled%201.png"><img style="width:564px" src="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled%201.png"/></a></figure><figure id="60c61620-ddc5-41f4-bda4-a285c9b0d9f0"><a href="https://reflect.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Reflect</div><div class="bookmark-description">A beautifully minimalist note-taking app designed to mirror the way you think. Now with a native AI integration.</div></div><div class="bookmark-href"><img src="https://reflect.app/home/build/q-171a9a33.png" class="icon bookmark-icon"/>https://reflect.app/</div></div><img src="https://site.reflect.app/home/build/q-11289093.jpeg" class="bookmark-image"/></a></figure><figure id="cad19658-c6af-4fe7-9034-59d99eb35de9"><a href="https://ui.glass/generator/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Glassmorphism CSS Generator - Glass UI</div><div class="bookmark-description">Generate CSS and HTML components using the glassmorphism design specifications based on the Glass UI library.</div></div><div class="bookmark-href"><img src="https://ui.glass/generator/icons/icon-512x512.png?v=b058443bc233c74a2f41ecc851d6a2c5" class="icon bookmark-icon"/>https://ui.glass/generator/</div></div><img src="https://ui.glass/generator/static/og-image-17a128ad929c938ff99ce39e7d8d92bf.png" class="bookmark-image"/></a></figure><ul id="67f1f0dd-2cd0-4abe-a4c6-ca2d63e8d226" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Glass-like and elegant design.</li></ul><ul id="06349358-235c-4385-b5aa-26155dd94ead" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Provides a modern and sleek appearance, visually appealing.</li></ul><ul id="e83a31f4-1354-4345-a734-e6bbee407160" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Luxury travelers, stylish seekers.</li></ul><p id="8b0ec6c0-fdc8-4408-8cf1-0f202f1413ee" class="">
+</p><h2 id="259ca694-945f-4f92-96ef-f6237329dd63" class=""><strong>6. Brutalism</strong></h2><figure id="c9657bf5-45bb-4aca-a2a8-a1ccfdcbfa99"><div class="source"><a href="https://youtu.be/tbf6XDqCWFE">https://youtu.be/tbf6XDqCWFE</a></div></figure><ul id="be7a34c0-fb77-4363-aa2f-2be8c730fcf6" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Unconventional, raw, and chaotic design.</li></ul><ul id="58284191-8e50-4b75-910e-221ca5b71474" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Makes a bold statement, ideal for adventurous and alternative travel themes.</li></ul><ul id="192454de-b0aa-4f13-9a39-9bcc11f3b297" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Adventurous travelers, unconventional tastes.</li></ul><p id="4cff3cbc-2d48-4aab-8bb5-d03bc6e0344a" class="">
+</p><h2 id="b5d71cc2-3cfb-4395-b143-d185c8ea91d7" class=""><strong>7. Minimalist</strong></h2><figure id="0ed6aa12-8c35-49d3-9966-bb90a54b8909"><div class="source"><a href="https://youtu.be/-bRLr8rXp6k">https://youtu.be/-bRLr8rXp6k</a></div></figure><ul id="5d57f05a-1634-4025-b218-7034fc61f858" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Clean and elegant, focusing on simplicity.</li></ul><ul id="13e5cab0-b686-463e-ad44-21c0b0f7ea13" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Emphasizes the travel content and reduces distractions, ideal for luxury tours.</li></ul><ul id="a8a12759-97c8-42eb-bf56-da1eb1453647" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Luxury travelers, seekers of elegance.</li></ul><p id="227835b0-66c6-4050-b296-29290a7b4bdf" class="">
+</p><h2 id="b968a8fb-0104-4fc5-b79a-f50ce2c0f968" class=""><strong>8. Gradients and Vibrant Colors</strong></h2><figure id="ba3fc478-1be3-441d-98c6-ae1fbe364fe4"><div class="source"><a href="https://elje-group.com/">https://elje-group.com/</a></div></figure><figure id="da1b1452-a4d4-494b-952f-ef2dae286f38"><div class="source"><a href="http://symodd.com/">http://symodd.com/</a></div></figure><ul id="f4fd4cd6-e17d-43f4-b7ad-aee346c6975b" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Energizing and modern design.</li></ul><ul id="0d659757-687f-4cf8-9680-4a96246195f0" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Adds excitement and vibrancy, suitable for youth-oriented and energetic tours.</li></ul><ul id="474e2dbd-8f1c-450b-88a3-3cafb88bd5e7" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Youth travelers, those seeking excitement.</li></ul><p id="ef904c1d-ce16-4c29-b854-ac762017f21a" class="">
+</p><h2 id="5e48da8d-2396-4915-b17c-8f6ce3d95e80" class=""><strong>9. Dark Mode</strong></h2><figure id="8a1ae182-8547-4480-8937-abbdd8013b35"><a href="https://imotion-factory.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Filmproduktion und Videoproduktion, die Full-Service Agentur</div><div class="bookmark-description">Werbefilme, Imagefilme, Produktvideos und mehr. imotion factory, die preisgekrönten Agentur für Video- und Filmproduktion. Wir erzählen deine Geschichte.</div></div><div class="bookmark-href"><img src="https://imotion-factory.com/assets/images/favicon/apple-touch-icon.png?v1=v2" class="icon bookmark-icon"/>https://imotion-factory.com/</div></div><img src="https://imotion-factory.com/assets/images/shared/imotion-factory.jpg" class="bookmark-image"/></a></figure><ul id="1a0aed37-a237-441f-91a9-0f4c57a7baf1" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Dark color scheme for reduced eye strain.</li></ul><ul id="b7caf152-61b5-4b42-a3c6-5cfa2f838bd7" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Ideal for night-time browsing and viewing travel itineraries.</li></ul><ul id="8b6d54d6-8873-41f8-9ca5-253eb030a5f5" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Night owls, users in low-light conditions.</li></ul><ul id="dfacc15b-a034-4477-aebb-7ab95fefdee2" class="bulleted-list"><li style="list-style-type:disc">Reference:<a href="https://www.designrush.com/best-designs/websites/trends/best-dark-themed-website-designs">https://www.designrush.com/best-designs/websites/trends/best-dark-themed-website-designs</a></li></ul><p id="6c4d9e0b-31b3-4682-ba68-eee3fc2a6397" class="">
+</p><h2 id="03f5da8e-989f-4595-aa06-ca20bfb5ddc3" class=""><strong>10. Illustrative Design</strong></h2><figure id="4aff79b0-80b4-4f32-be58-e86e15d01860"><div class="source"><a href="https://blush.design/">https://blush.design/</a></div></figure><p id="afe8d308-80f3-4511-8df6-36954c0d3a6c" class=""> </p><figure id="21be2c68-8d93-4821-83d8-0008563914b5"><a href="https://expressionengine.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ExpressionEngine — The Best Open Source CMS</div><div class="bookmark-description">ExpressionEngine is a flexible, feature-rich content management platform that empowers hundreds of thousands of individuals and organizations around the world to easily manage their web site.…</div></div><div class="bookmark-href"><img src="https://expressionengine.com/assets/images/favicon/apple-touch-icon.png?v=YAmLW3PeY0" class="icon bookmark-icon"/>https://expressionengine.com/</div></div><img src="https://expressionengine.com//assets/images/website-social-card.png" class="bookmark-image"/></a></figure><ul id="b99b6fa9-3564-487f-88fb-b7bcdd5e83b2" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Custom illustrations for a unique look.</li></ul><ul id="31dfc639-694f-4a40-9e9b-ea1135ccbcbd" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Personalizes the website, adds creativity to tour descriptions.</li></ul><ul id="6d71d9f4-b9c7-43b9-a55e-ce05f2e3d12b" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Users who appreciate artistic elements.</li></ul><ul id="47cfeb8d-ae9c-4a0e-94c1-2825ce5173d9" class="bulleted-list"><li style="list-style-type:disc">Reference:<a href="https://undraw.co/illustrations">https://undraw.co/illustrations</a> , <a href="https://www.vandelaydesign.com/25-websites-that-feature-fabulous-illustrations/">https://www.vandelaydesign.com/25-websites-that-feature-fabulous-illustrations/</a></li></ul><h2 id="e57c8ee8-8f9a-476f-9c6b-12f03e1b139b" class=""><strong>11. Neo Brutalism</strong></h2><figure id="3e7bbf82-1d84-44b9-a2f0-ddc2f211f5e5"><div class="source"><a href="https://www.cccreative.design/">https://www.cccreative.design/</a></div></figure><p id="50bd22af-6252-434d-abf0-991ddaf4cd00" class=""> </p><figure id="3ba721d6-fc06-48c1-a768-87f1e179d411"><div class="source"><a href="https://pancakewebstudio.com/web-design">https://pancakewebstudio.com/web-design</a></div></figure><ul id="c766d8c9-1c47-46ab-9abe-b2c4d9d45ec5" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Unconventional and rebellious design.</li></ul><ul id="60b106a1-caaa-4df7-b253-9931b996a3d9" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Makes a strong statement, suitable for adventure and alternative travel.</li></ul><ul id="5b2f3f9f-961c-48f8-b40c-69bec17212d8" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Adventurous travelers, alternative seekers.</li></ul><h2 id="4eb114b8-2627-4cbc-929a-7f9c4124039f" class=""><strong>12. Vintage or Retro Design</strong></h2><figure id="4b03a44d-c30a-48c3-a074-e98fc636a8d5"><a href="http://preview.themeforest.net/item/vintwood-a-vintage-retro-wordpress-theme/full_screen_preview/22601126" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">VintWood - a Vintage, Retro WordPress Theme Preview - ThemeForest</div><div class="bookmark-description">&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;VintWood&amp;lt;/strong&amp;gt; is a handcrafted vintage style WordPress theme ded...</div></div><div class="bookmark-href"><img src="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-144x144-precomposed.png" class="icon bookmark-icon"/>http://preview.themeforest.net/item/vintwood-a-vintage-retro-wordpress-theme/full_screen_preview/22601126</div></div></a></figure><ul id="a5f1fcdc-fc70-4b0f-881f-7616fc72888a" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Nostalgic and classic travel aesthetics.</li></ul><ul id="8e415c68-cdb2-4a1c-ba01-a7ce41e39e10" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Evokes a sense of nostalgia and charm, ideal for classic and historical tours.</li></ul><ul id="d30a4a36-e262-4e43-95c3-921f6286f0f1" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Those seeking vintage travel experiences.</li></ul><p id="5ea7d213-42c4-44ba-aaeb-8bb1e6e9b6a2" class="">
+</p><p id="66ec81cb-afff-4c57-91d2-1b4fa7a946bd" class=""><strong>15. Responsive and Mobile-First Design</strong></p><ul id="414f0b21-7ea8-43c8-8439-ef422dea6c7d" class="bulleted-list"><li style="list-style-type:disc"><em>Description</em>: Ensures compatibility with various devices.</li></ul><ul id="f7dbeda7-54e7-43ab-aa7f-51ca39e647a6" class="bulleted-list"><li style="list-style-type:disc"><em>Benefits</em>: Enhances user experience on mobile devices, critical for on-the-go travelers.</li></ul><ul id="132f15d8-7928-46b5-91fb-7aee89215afe" class="bulleted-list"><li style="list-style-type:disc"><em>Users Attracted Most</em>: Mobile travelers, tech-savvy users.</li></ul><ol type="1" id="8675f8e0-7d9f-4235-821e-c5ebe38f16a8" class="numbered-list" start="16"><li>colorless UI</li></ol><figure id="65237fd3-24eb-4dfa-bb32-ecdf5da4a2e6" class="image"><a href="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled%202.png"><img style="width:1400px" src="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled%202.png"/></a></figure><p id="9b8dbc96-66a0-4dc1-9d52-72694c1e07e7" class="">
+</p><p id="182ef1ac-695e-4966-a3d2-f4d136b7db6a" class="">
+</p><h1 id="d27e1fb7-5f1c-410a-a527-ed321fc5db6b" class="">Popular Traveling Websites and Their Design Themes</h1><figure id="5973bc02-f893-44f8-9e1f-4ab5b3bea22a" class="image"><a href="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled%203.png"><img style="width:752px" src="Akshar%20Tours%20&amp;%20Travels%20Website%20add32064c01741678cb417691f069a4e/Untitled%203.png"/></a></figure><h2 id="b4f21271-9f1a-426e-baf7-55d1017e25e5" class=""><strong>Description</strong>: </h2><p id="64abca0b-82bf-4e0f-b5c3-61d9ab7bf3fc" class="">This table provides a list of popular traveling websites and their respective design themes as of November 2023. It also includes links to visit these websites for a firsthand experience of their design and user interfaces.</p><table id="7f05d271-a20a-4541-bbc0-fd3529aa13e5" class="simple-table"><tbody><tr id="c79202eb-58b0-4254-9325-97c92d16d8b5"><td id="wTfu" class=""><strong>Popular Traveling Website</strong></td><td id="Zm&gt;g" class=""><strong>Design Theme</strong></td><td id="x^@J" class="" style="width:299.625px"><strong>Website URL</strong></td></tr><tr id="44aea260-175c-488c-b816-d82a5ae3c688"><td id="wTfu" class="">Expedia</td><td id="Zm&gt;g" class="">Material Design, Responsive, User-Friendly</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.expedia.com/">https://www.expedia.com/</a></td></tr><tr id="310dc0d8-607b-40aa-96ba-e010d6775a1c"><td id="wTfu" class="">TripAdvisor</td><td id="Zm&gt;g" class="">User-Centric, Content-Driven, Visual</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.tripadvisor.com/">https://www.tripadvisor.com/</a></td></tr><tr id="189166e5-9e2d-453c-a102-1bdb8572126d"><td id="wTfu" class="">Kayak</td><td id="Zm&gt;g" class="">Modern, Minimalistic, Clean</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.kayak.co.in/">https://www.kayak.com/</a></td></tr><tr id="d33f004b-fea8-42d1-840f-7b86a4f95c02"><td id="wTfu" class="">Booking.com</td><td id="Zm&gt;g" class="">User-Focused, Simplistic, Comprehensive</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.booking.com/">https://www.booking.com/</a></td></tr><tr id="76069bc5-c37c-4faa-a82e-a6eb1bb40aec"><td id="wTfu" class="">Skyscanner</td><td id="Zm&gt;g" class="">Minimalist, User-Friendly, Comprehensive</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.skyscanner.co.in/">https://www.skyscanner.com/</a></td></tr><tr id="6f928b41-02c3-4ab5-aed9-026cbc2b5c50"><td id="wTfu" class="">Lonely Planet</td><td id="Zm&gt;g" class="">Adventure, Exploration, Informative</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.lonelyplanet.com/">https://www.lonelyplanet.com/</a></td></tr><tr id="10e3d7a0-53af-4002-8f64-853a2c7ff3b0"><td id="wTfu" class="">Airbnb</td><td id="Zm&gt;g" class="">Community-Driven, Homely, Visual</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.airbnb.co.in/">https://www.airbnb.com/</a></td></tr><tr id="845a897d-546b-4fd1-91d1-2a75bca8524c"><td id="wTfu" class="">Google Travel</td><td id="Zm&gt;g" class="">Clean, Minimalist, User-Friendly</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.google.com/travel/">https://www.google.com/travel</a></td></tr><tr id="3b9769d8-02dd-4546-b7f0-1a0732a4600a"><td id="wTfu" class="">Hostelworld</td><td id="Zm&gt;g" class="">Colorful, Vibrant, Community-Driven</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.hostelworld.com/">https://www.hostelworld.com/</a></td></tr><tr id="6a32601d-25d4-448b-8749-f90d82556a5e"><td id="wTfu" class="">Viator</td><td id="Zm&gt;g" class="">Immersive, Engaging, Informative</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.viator.com/">https://www.viator.com/</a></td></tr><tr id="5ec8f11b-4cf9-44d1-b4a5-3fc614c17a2b"><td id="wTfu" class="">Travelocity</td><td id="Zm&gt;g" class="">Modern, Clean, User-Friendly</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.travelocity.com/">https://www.travelocity.com/</a></td></tr><tr id="fc4681f6-6b91-42dd-bd94-7500d4d2f604"><td id="wTfu" class="">Priceline</td><td id="Zm&gt;g" class="">User-Focused, Value-Driven, Simplistic</td><td id="x^@J" class="" style="width:299.625px"><a href="https://www.priceline.com/">https://www.priceline.com</a></td></tr></tbody></table><p id="a4383a1f-7bd7-4064-b55f-15905aa784cb" class="">
+</p><h1 id="34d72a17-0797-45ec-9166-515dc8786287" class="">Other design ideas </h1><h2 id="f0f8139d-65cb-4ac4-b979-58b3350e1369" class="">Blur effect background</h2><figure id="53a209e5-11a4-4171-a3bd-398a45313ed6"><div class="source"><a href="https://cdn.dribbble.com/users/427857/screenshots/12209806/media/6f4b4f85cd195367d9994de64e1cf1e1.mp4">https://cdn.dribbble.com/users/427857/screenshots/12209806/media/6f4b4f85cd195367d9994de64e1cf1e1.mp4</a></div></figure><p id="b1012930-6bfb-4570-96eb-8c1457f63d26" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
